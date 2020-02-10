@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    home insurance
+  </title>
+  <link rel="stylesheet" type="text/css" href="home_ins.css">
+</head>
+<body>
+<div class="main" >
+      <div class="logo">
+      <h1 >INSURAX</h1>
+  </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">Get a Quote</a></li>
+          <li><a href="#">Sevices</a></li>
+          <li><a href="#">Pay premium</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+<button class="tablink" onclick="openPage('new')" id="defaultOpen"><b>Own house</b><p style="font-size: 12px;color: #000;">Safeguard structure & content </p></button>
+<button class="tablink" onclick="openPage('Existing')" ><b>Rented house</b><p style="font-size: 12px;color: #000;">Safeguard your home assets</p></button>
+
+
+
+<div id="new" class="tabcontent" >
+
+        <form class="form" onsubmit="return(validate())">
+         <table ><tr><td>
+          <div class="form-group" style="font-size: 14px;">
+            Built-up area (Sq. ft) :
+            <input type="text" class="form-control" id="21" style="padding: 20px 80px 20px 20px;">
+            
+          </div>
+        </td><td>
+          <div class="form-group" style="font-size: 14px;"> Cost of construction (Rs./Sq. ft) :
+            <input type="text" class="form-control" id="23" style="padding: 20px 80px 20px 20px;" >
+            
+          </div></td></tr>
+          <tr><td>
+          <div class="form-group" style="margin-left: 18px;">
+           Mobile number :
+            <input type="text" id="11" class="form-control" style="padding: 20px 80px 20px 20px;" >
+            
+          </div>
+        </td><td>
+          <div class="form-group" id="22" style="margin-left: 147px;"> Email :
+            <input type="text" class="form-control" style="padding: 20px 80px 20px 20px;" >
+            
+          </div></td></tr>
+          <tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox">  I agree to the Terms and Conditions
+              
+            </td>
+          </tr>
+            <td colspan="2">
+              <input type="checkbox"> I wish to get policy details on my  whatsapp number
+              
+            </td>
+          </tr>
+          <tr><td  colspan="2" style="text-align:  center;"><div class="form-group">
+            <input type="submit" class="r" value="Submit">
+            
+          </div></td></tr></table>
+        </form>
+        
+
+</div>
+<script type="text/javascript">
+  function validate()
+    {
+       if(document.getElementById("21").value=="")
+      {
+        alert("Please fill these field!")
+        document.getElementById("21").focus();
+        return false;
+      }
+       if(document.getElementById("23").value=="")
+      {
+        alert("Please fill these field!")
+        document.getElementById("23").focus();
+        return false;
+      }
+      
+      a=document.getElementById("11").value
+      if(a==""||a.length!=10||isNaN(a))
+      {
+        alert("Please provide valid phone number!");
+        document.getElementById("11").focus();
+        return false;
+      }
+    
+      x=document.getElementById("22").value;
+      atpos=x.indexOf("@");
+      dotpos=x.indexOf(".");
+      dotposLast=x.lastIndexOf(".");
+      if(x==""||atpos==0||dotpos<=atpos+2||dotposLast+2>=x.length)
+      {
+        alert("Please provide correct Email id!");
+        document.getElementById("22").focus();
+        return false;
+      }
+      
+      
+     
+      return(true);
+    }
+</script>
+<div id="Existing" class="tabcontent">
+  
+        <form class="form" onsubmit="return(validat())">
+          <table><tr><td>
+          <div class="form-group" style="font-size: 16px;">Total value (including jewellery) :
+
+            <input type="text" class="form-control" id="97" style="padding: 20px 50px 20px 20px;">
+            
+          </div>
+        </td>
+      <td>
+          <div class="form-group" style="font-size: 16px;">Value of the jewellery :
+
+            <input type="text" class="form-control" id="55" style="padding: 20px 50px 20px 20px;">
+            
+          </div>
+        </td></tr><tr><td>
+          <div class="form-group" style="font-size: 16px;margin-left: 110px;">
+            Mobile Number :
+            <input type="text" class="form-control" id="14" style=" padding: 20px 50px 20px 20px;">
+            
+          </div>
+        </td><td>
+          <div class="form-group" style=" font-size: 16px; margin-left: 100px;"> Email-Id :
+            <input type="text" class="form-control" id="23" style="padding: 20px 50px 20px 20px;">
+            
+          </div></td></tr>
+                    <tr>
+            <td colspan="2">
+              <div class="form-group">
+              <input type="checkbox">  I agree to the Terms and Conditions
+              </div>
+            </td>
+          </tr>
+            <td colspan="2">
+              <div class="form-group">
+              <input type="checkbox"> I wish to get policy details on my  whatsapp number
+              </div>
+            </td>
+          </tr>
+          <tr><td colspan="2" style="text-align: center;">
+           <div class="form-group">
+            <input type="submit" class="r" value="Submit">
+            
+          </div>
+        </td></tr></table>
+         </form>
+        </div>
+  <script type="text/javascript">
+  function validat()
+    {
+       if(document.getElementById("97").value=="")
+      {
+        alert("Please fill these field!")
+        document.getElementById("97").focus();
+        return false;
+      }
+       if(document.getElementById("55").value=="")
+      {
+        alert("Please fill these field!")
+        document.getElementById("55").focus();
+        return false;
+      }
+      
+      a=document.getElementById("14").value
+      if(a==""||a.length!=10||isNaN(a))
+      {
+        alert("Please provide valid phone number!");
+        document.getElementById("14").focus();
+        return false;
+      }
+    
+      x=document.getElementById("23").value;
+      atpos=x.indexOf("@");
+      dotpos=x.indexOf(".");
+      dotposLast=x.lastIndexOf(".");
+      if(x==""||atpos==0||dotpos<=atpos+2||dotposLast+2>=x.length)
+      {
+        alert("Please provide correct Email id!");
+        document.getElementById("23").focus();
+        return false;
+      }
+    
+      return(true);
+    }
+</script>      
+
+
+
+<script type="text/javascript">
+  function openPage(pageName) {
+  var i, tabcontent;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+
+  document.getElementById(pageName).style.display = "block";
+
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+</div>
+</div>
+<section class="fullgreen">
+  <div class="main"><table><tr><td style="padding-right: 40px;">
+   <div class="carimg">
+    <img src="homes1.png" style="height: 275px; width: 350px; ">
+     
+   </div></td><td>  <div class="text"><p><b><span style="font-size: 20px;line-height: 30px;letter-spacing: 0.5px; color: #fff; ">Stay covered against natural calamities </span></b><br><br>
+<span style="line-height: 20px;letter-spacing: 0.5px; color: #fff;">
+Calamities come unannounced and can cause irreparable damage to your home and finances. With comprehensive home insurance, secure your home and its contents against natural calamities and stay rest assured.</span></p></div></td></tr></table>
+    
+  </div>
+   
+</section>
+<section class="info">
+  <div class="main">
+    <div class="content">
+      <div class="heading" > <h1 style="text-align: center; font-weight: bold;">UNDERSTAND YOUR HOME INSURANCE POLICY COVERAGE</h1></div>
+      <h2 style="padding-bottom: 15px;">Your policy covers:</h2>
+   <div class="inclusions">
+    
+     <ul><li>
+          <p>Home insurance policy gives protection for only the building (structure) of your home, or only the content (belongings) of your home, or both as per the coverage opted. The policy covers losses to the structure and/or content of your home, that might occur due to a number of natural and/or man-made calamities.<br><br>
+     </p>
+         </li></ul>
+         <h4>The calamities covered are</h4>
+         <ul>
+           <li>Fire </li>
+           <li>Lightning </li>
+           <li>Impact Damage </li>
+           <li>Aircraft Damage </li>
+           <li>Explosion/implosion </li>
+           <li>Storm, cyclone, typhoon, tempest, hurricane, tornado, flood and inundation </li>
+         </ul>
+           <span id="dots">... <br><br></span> <span id="more" style="display:none;">
+
+          <ul>
+           <li>Riots, strike, malicious and terrorism damage </li>
+           <li>Subsidence and landslide including rockslide </li>
+           <li>Bursting and/or overflowing of water tanks, apparatus and pipes </li>
+           <li>Missile testing operations </li>
+           <li>Leakage from automatic sprinkler installations </li>
+           <li>Bush fire </li>
+           <li>Earthquake </li>
+           <li>The content of your home is also covered against loss due to burglary or an attempted burglary / housebreaking including theft. It also covers loss of jewellery, silver articles and precious stones kept under lock and key, up to 25% of the total content sum insured or `1 lakh, whichever is lower. </li>
+
+         </ul>
+       </span>
+         <button onclick="no3()" class="read" id="r"> Read More > </button>
+            <script type="text/javascript">
+              function no3() {
+                 dots = document.getElementById("dots");
+                 moreText = document.getElementById("more");
+                 btnText = document.getElementById("r");
+
+                if (dots.style.display === "none") {
+                  dots.style.display = "inline";
+                  btnText.innerHTML = "Read More >"; 
+                  moreText.style.display = "none";
+                } else {
+                  dots.style.display = "none";
+                  btnText.innerHTML = "Read Less >"; 
+                  moreText.style.display = "inline";
+                }
+              }
+            </script>
+
+    <h2 style="padding-bottom: 25px; padding-top: 30px;">What is not covered under your home insurance policy: Exclusions</h2>
+   
+    
+        <ul><li>Non-allopathic treatment, pregnancy and childbirth related complications, cosmetic, aesthetic and obesity related treatment</li></ul></td>
+        <ul><li>Expenses arising from HIV or AIDS and related diseases, use or misuse of liquor, intoxicating substances or drugs as well as intentional self-injury</li></ul>
+      
+      <span id="dots">... <br><br></span> <span id="more" style="display:none;">
+        
+        <ul><li>War, civil war or breach of law</li></ul>
+        <ul><li>Naturopathy treatment, acupressure, acupuncture, magnetic and other such therapies</li></ul>
+        
+      
+        <ul><li>Treatment taken outside the country</li></ul>
+        <ul><li>Any expenses arising out of domiciliary treatment</li></ul>
+        
+        <ul><li>Damage to/ by a person driving the vehicle under the influence of drugs or liquor</li></ul>
+        <ul><li>Loss/ damage due to war, mutiny or nuclear risk</li></ul>
+        
+        
+        
+        <ul><li>Damage to tyres and tubes unless the vehicle is damaged<br> at the same time, in which case the liability of the company shall <br>be limited to 50% of the cost of replacement</li></ul>
+        
+        
+        
+        <ul><li>Driving the vehicle against the limitations<br> as to use</li></ul>
+        
+ </table></span>
+<button onclick="no3()" class="read" id="r"> Read More > </button>
+            <script type="text/javascript">
+              function no3() {
+                 dots = document.getElementById("dots");
+                 moreText = document.getElementById("more");
+                 btnText = document.getElementById("r");
+
+                if (dots.style.display === "none") {
+                  dots.style.display = "inline";
+                  btnText.innerHTML = "Read More >"; 
+                  moreText.style.display = "none";
+                } else {
+                  dots.style.display = "none";
+                  btnText.innerHTML = "Read Less >"; 
+                  moreText.style.display = "inline";
+                }
+              }
+            </script>
+
+            <p style="letter-spacing: 0.5px; padding-top: 20px; font-weight: bold; line-height: 27px;">It’s always a good idea to be aware of what is excluded from your policy, so that you are not disappointed by extra expenses later. So make sure you go through the Home Insurance Policy Wordings carefully.</p>
+            <p style="letter-spacing: 0.5px; padding-top: 20px; line-height: 27px; padding-bottom: 70px;"><i>
+              Home Insurance<br>
+              IRDAN115P0017V01200102 <br>
+              </p></div>
+ 
+</div></div></section>
+<section class="ben">
+  <div class="main">
+    <div class="content" style=" margin-top: 40px;  padding: 5px;">
+      <div class="heading"> 
+      <h2 style="font-weight: 20px;">Check the sum insured offered by your home insurance policy</h2></div>
+      <p style=" letter-spacing: 0.5px; padding-top: 20px;  line-height: 27px; padding-top: : 15px;">When you are considering the value of your home for insuring the structure, you should remember that it is not determined by the market value, which is a combination of cost of land, demand and supply, etc. The value, called reconstruction value, is decided on the basis of how much it would cost you to reconstruct the house if it is damaged.</p>
+      <ul style="padding: 20px;">
+        <li>The sum insured is calculated by multiplying the built up area of your home with the construction rate per sq. feet, e.g. if the built up area of your home is 1000 sq. feet and the construction rate is `800 per sq. feet, the sum insured for your home structure is ` 8 lakhs.</li>
+        <li>We recommend the rate of construction for few major cities when you buy online; click here to know the construction cost. However, this value can be revised appropriately if expensive material – like marble flooring – has been used in construction. If your home has lawn / garden surrounded by a perimeter wall, the construction rate can be revised to include the cost of construction of this wall in the home structure sum insured.</li>
+        <li>The contents of your home – furniture, durables, clothes, utensils, jewellery, etc., is to be valued on market value basis, that is the current market value of similar items after depreciation.</li>
+        </ul></i>
+  </div>
+  </div>
+</section>
+
+<section class="claimproc">
+  <div class="main">
+    <div class="content">
+    <div class="heading">
+      <h1 style="text-align: center; font-weight: bold; font-size: 27px;">EXPLORE OUR SIMPLE & HASSLE-FREE HEALTH INSURANCE CLAIM PROCESS</h1>
+    </div>
+    <div class="accord">
+    <div class="accordion">
+
+
+
+
+<button class="accordion" >In case of an unforeseen loss/damage to your home, be assured of complete assistance from us
+</button>
+
+<div class="panel">
+<ul><li>When in an emergency, call us on our 24x7 toll free insurance helpline, 1800 2666, and leave the rest to us</li><br></ul>
+
+<ul><li>Provide relevant information, which includes your policy and other details regarding your claim</li><br></ul>
+
+<ul><li>We will then authenticate your claim request and escalate it to our claims department</li><br></ul>
+
+<ul><li>Once our claims department validates and registers your request, we appoint a surveyor within 48 hours</li><br></ul>
+<ul><li>On receipt of the documents, our claims department processes the claim within 7 days</li><br></ul>
+
+</div>
+
+<button class="accordion">To make your claim settlement process faster and simpler, follow this checklist of documents</button>
+<div class="panel">
+
+<p><ul>
+  <li>Duly completed and signed claim form</li><br>
+<li>Photocopy of policy</li><br>
+<li>Copy of FIR</li><br>
+<li>Final report from police</li><br>
+<li>Copy of all invoices, price lists, and repair estimates</li></ul></p>
+
+</div>
+
+
+
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+
+var i;
+
+for (i = 0; i < acc.length; i++) {
+ acc[i].onclick = function(){
+  this.classList.toggle("active");
+  this.nextElementSibling.classList
+  .toggle("show");
+
+  }
+
+}
+
+</script>
+    </div>
+  </div>
+  </div></div>
+
+</section>
+<section class="faq">
+  <div class="main">
+    <div class="cont">
+    <div class="heading">
+    <h1 style="color: #fff;">COMMON QUERIES ABOUT HEALTH INSURANCE (FAQS)</h1> 
+      
+    </div>
+     
+    <div class="tabnav">
+    <button class="tab" onclick="openPag('general')" id="defaultOpe">GENERAL</button>
+    <button class="tab" onclick="openPag('cover')">COVERS</button>
+    <button class="tab" onclick="openPag('premium')">PREMIUM</button>
+    <button class="tab" onclick="openPag('claims')">CLAIMS</button>
+    <button class="tab" onclick="openPag('policy')">POLICY</button>
+<script type="text/javascript">
+  function openPag(pageName) {
+  var i, tabconten;
+  tabconten = document.getElementsByClassName("pagetab");
+  for (i = 0; i < tabconten.length; i++) {
+    tabconten[i].style.display = "none";
+  }
+
+
+  document.getElementById(pageName).style.display = "block";
+
+}
+
+</script>
+</div>
+    <hr style="border-width: 2px;">
+   <div class="pag" style="padding-bottom: 40px;">
+      <div id="general" class="pagetab">
+        
+        <h3>&#10001; &nbsp;How would I benefit by buying health insurance at a young age?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Buying health insurance at a young age is a prudent decision as it provides several significant benefits like lower premium. Purchasing insurance at 25 years of age benefits the insured with a lower premium amount, as insurers are aware that people are comparatively more fit in their 20s than in their 40s, and are less likely to fall sick due to a strong immune system. The low premium is subject to change however, and is not fixed. It can be changed for various reasons, such as change in age slabs or product and even revision in tax laws. </p>
+
+        <h3>&#10001; &nbsp;What’s the maximum age limit for a complete health insurance plan?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">There is no maximum entry age limit to apply for a complete health insurance plan. However, there are some conditions: </p>
+        <ul>
+          <li id="c">Applicant should be 18 years of age</li>
+          <li id="c">Minimum age for children is 91 days (floater option) and 6 years (individual cover)</li>
+          <li id="c">Applicants more than 46 years of age will have to undergo medical tests</li>
+        </ul>
+        <h3>&#10001; &nbsp;How much health insurance coverage do I need?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">The amount of coverage needed is based on several deciding factors like current age, health conditions, family medical history, family members and their health conditions, ability to pay premium and hospital preferences
+
+          After considering these factors, an individual decision needs to be made. You can contact us for assistance. </p>
+           <h3>&#10001; &nbsp;What is No Claim Bonus (NCB)?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">In case you have made no claim during the policy period, except as an outpatient, the sum insured amount of your policy will increase by a fixed percent – this is called No Claim Bonus. It is transferable and can be carried forward to the next policy tenure.</p>
+        <h3>&#10001; &nbsp;What do you mean by pre-existing disease?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Any condition, aliment or injury or related condition(s), for which you had signs or symptoms and/or were diagnosed and/or received medical advice/treatment within 48/24* months prior to the first policy with the insurance company is called a pre-existing disease. (*as per selected plan)</p>
+     </div>
+
+     <div id="policy" class="pagetab">
+           <h3>&#10001; &nbsp;How would I benefit by buying health insurance at a young age?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Buying health insurance at a young age is a prudent decision as it provides several significant benefits like lower premium. Purchasing insurance at 25 years of age benefits the insured with a lower premium amount, as insurers are aware that people are comparatively more fit in their 20s than in their 40s, and are less likely to fall sick due to a strong immune system. The low premium is subject to change however, and is not fixed. It can be changed for various reasons, such as change in age slabs or product and even revision in tax laws. </p>
+
+        <h3>&#10001; &nbsp;What’s the maximum age limit for a complete health insurance plan?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">There is no maximum entry age limit to apply for a complete health insurance plan. However, there are some conditions: </p>
+        <ul>
+          <li id="c">Applicant should be 18 years of age</li>
+          <li id="c">Minimum age for children is 91 days (floater option) and 6 years (individual cover)</li>
+          <li id="c">Applicants more than 46 years of age will have to undergo medical tests</li>
+        </ul>
+        <h3>&#10001; &nbsp;How much health insurance coverage do I need?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">The amount of coverage needed is based on several deciding factors like current age, health conditions, family medical history, family members and their health conditions, ability to pay premium and hospital preferences
+
+          After considering these factors, an individual decision needs to be made. You can contact us for assistance. </p>
+           <h3>&#10001; &nbsp;What is No Claim Bonus (NCB)?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">In case you have made no claim during the policy period, except as an outpatient, the sum insured amount of your policy will increase by a fixed percent – this is called No Claim Bonus. It is transferable and can be carried forward to the next policy tenure.</p>
+        <h3>&#10001; &nbsp;What do you mean by pre-existing disease?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Any condition, aliment or injury or related condition(s), for which you had signs or symptoms and/or were diagnosed and/or received medical advice/treatment within 48/24* months prior to the first policy with the insurance company is called a pre-existing disease. (*as per selected plan)<br></p>
+      </div>
+
+      <div id="cover" class="pagetab">
+      <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted</p>
+
+      <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted<br></p>
+  </div>
+
+  <div id="premium" class="pagetab">
+                <h3>&#10001; &nbsp;How would I benefit by buying health insurance at a young age?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Buying health insurance at a young age is a prudent decision as it provides several significant benefits like lower premium. Purchasing insurance at 25 years of age benefits the insured with a lower premium amount, as insurers are aware that people are comparatively more fit in their 20s than in their 40s, and are less likely to fall sick due to a strong immune system. The low premium is subject to change however, and is not fixed. It can be changed for various reasons, such as change in age slabs or product and even revision in tax laws. </p>
+
+        <h3>&#10001; &nbsp;What’s the maximum age limit for a complete health insurance plan?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">There is no maximum entry age limit to apply for a complete health insurance plan. However, there are some conditions: </p>
+        <ul>
+          <li id="c">Applicant should be 18 years of age</li>
+          <li id="c">Minimum age for children is 91 days (floater option) and 6 years (individual cover)</li>
+          <li id="c">Applicants more than 46 years of age will have to undergo medical tests</li>
+        </ul>
+        <h3>&#10001; &nbsp;How much health insurance coverage do I need?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">The amount of coverage needed is based on several deciding factors like current age, health conditions, family medical history, family members and their health conditions, ability to pay premium and hospital preferences
+
+          After considering these factors, an individual decision needs to be made. You can contact us for assistance. </p>
+           <h3>&#10001; &nbsp;What is No Claim Bonus (NCB)?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">In case you have made no claim during the policy period, except as an outpatient, the sum insured amount of your policy will increase by a fixed percent – this is called No Claim Bonus. It is transferable and can be carried forward to the next policy tenure.</p>
+        <h3>&#10001; &nbsp;What do you mean by pre-existing disease?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Any condition, aliment or injury or related condition(s), for which you had signs or symptoms and/or were diagnosed and/or received medical advice/treatment within 48/24* months prior to the first policy with the insurance company is called a pre-existing disease. (*as per selected plan)</p>
+      </div>
+       <div id="claims" class="pagetab">
+        <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted</p>
+
+      <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted <br></p>
+     </div>
+
+   
+</div>
+  </div>
+  </div>
+  
+</section>
+<div class="customer">
+<div class="main">
+  <div class="heading" > <h1 style="text-align: center; font-weight: bold;">TESTEMONIALS</h1></div>
+  <div class="contain">
+    
+    <div class="box">
+      <div class="img-box">
+        <img src="123.jpg" height="120" width="120">
+      </div>
+      <p>
+        “INSURAX's online booking experience is very seamless, especially if one is renewing the motor policy it is the most hassle-free ... ”
+      </p>
+      <h4>someone<br> <span>creative director</span></h4>
+    </div>
+    <div class="box">
+      <div class="img-box">
+        <img src="134.jpg" height="120" width="120">
+      </div>
+      <p>
+        “INSURAX's online booking experience is very seamless, especially if one is renewing the motor policy it is the most hassle-free ... ”
+      </p>
+      <h4>someone<br> <span>creative director</span></h4>
+    </div>
+    <div class="box">
+      <div class="img-box">
+        <img src="156jpg.jpg" height="120" width="120">
+      </div>
+      <p>
+       “INSURAX's online booking experience is very seamless, especially if one is renewing the motor policy it is the most hassle-free ... ”
+      </p>
+      <h4>someone<br> <span>creative director</span></h4>
+    </div>
+     
+  </div>
+</div>
+</div>
+</section>
+<section class="footer">
+  <div class="main">
+    <table>
+      <tr>
+        <th> Get to know us</th>
+        <th>Connect with us</th>
+        <th>Payment methods</th>
+        <th>Let us help you</th>
+      </tr>
+      <tr>
+        <td>
+          About us 
+        </td>
+        <td> <a href="facebook.com"><img src="fb.png" style="padding-left: 0px;"><img src="instagram.png"> <img src="linkedin.png"><img src="twit_c.png"></a></td>
+        <td>Credit Card</td>
+        <td> Your account</td>
+      </tr>
+      <tr><td>
+        Press release
+      </td>
+      <td></td>
+      <td>Debit Card</td>
+      <td>Disclaimer</td>
+       </tr>
+        <tr><td>
+        Our services
+      </td>
+      <td></td>
+      <td>Net banking</td>
+      <td>File claim</td>
+       </tr>
+    </table>
+   </div>
+</section>
+</body>
+</html>

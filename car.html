@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    car insurance
+  </title>
+  <link rel="stylesheet" type="text/css" href="car.css">
+</head>
+<body>
+<div class="main" >
+      <div class="logo">
+      <h1 >INSURAX</h1>
+  </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">Get a Quote</a></li>
+          <li><a href="#">Sevices</a></li>
+          <li><a href="#">Pay premium</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+<button class="tablink" onclick="openPage('new')" ><b>Buy New</b><p style="font-size: 12px;color: #000;">Buying for a new car </p></button>
+<button class="tablink" onclick="openPage('Existing')"id="defaultOpen" ><b>Existing Policy</b><p style="font-size: 12px;color: #000;">Renew policy from another Insurer </p></button>
+<button class="tablink" onclick="openPage('Insurax')"><b>Renew Policy</b><p style="font-size: 12px;color: #000;">Renew existing Insurax policy </p></button>
+
+
+<div id="new" class="tabcontent">
+
+        <form class="form" onsubmit="return (validate())">
+         <table ><tr><td>
+          <div class="form-group">
+            Phone Number :
+            <input type="text" class="form-control" id="11" >
+            
+          </div>
+        </td><td>
+          <div class="form-group"> Email-Id :
+            <input type="text" class="form-control" id="22">
+            
+          </div></td></tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" name="checkbox" >  I agree to the Terms and Conditions
+              
+            </td>
+          </tr>
+            <td colspan="2">
+              <input type="checkbox"   > I wish to get policy details on my  whatsapp number
+              
+            </td>
+          </tr>
+          <tr><td  colspan="2" style="text-align:  center;"><div class="form-group">
+            <input type="submit" class="r" value="Submit">
+            
+          </div></td></tr></table>
+        </form>
+        
+
+</div>
+<script type="text/javascript">
+  function validate()
+    {
+      
+       
+      
+      a=document.getElementById("11").value
+      if(a==""||a.length!=10||isNaN(a))
+      {
+        alert("Please provide valid phone number!");
+        document.getElementById("11").focus();
+        return false;
+      }
+    
+      x=document.getElementById("22").value;
+      atpos=x.indexOf("@");
+      dotpos=x.indexOf(".");
+      dotposLast=x.lastIndexOf(".");
+      if(x==""||atpos==0||dotpos<=atpos+2||dotposLast+2>=x.length)
+      {
+        alert("Please provide correct Email id!");
+        document.getElementById("22").focus();
+        return false;
+      }
+      if(!this.form.checkbox.checked)
+        {alert('You must agree to the terms first.');
+      return false;
+    }
+     
+      return(true);
+    }
+</script>
+<div id="Existing" class="tabcontent">
+  
+        <form class="form" onsubmit="return (valida())" >
+          <table><tr><td colspan="2" style="text-align: center ;">
+          <div class="form-group" >Registraion Number :
+            <input type="text" id="12" class="form-control" placeholder="(Eg.MH02CL0094)">
+            
+          </div>
+        </td></tr><tr><td>
+          <div class="form-group">
+            Phone Number :
+            <input type="text" class="form-control" id="33">
+            
+          </div>
+        </td><td>
+          <div class="form-group"> Email-Id :
+            <input type="text" class="form-control" id="44">
+            
+          </div></td></tr>
+                    <tr>
+            <td colspan="2">
+              <div class="form-group">
+              <input type="checkbox" >  I agree to the Terms and Conditions
+              </div>
+            </td>
+          </tr>
+            <td colspan="2">
+              <div class="form-group">
+              <input type="checkbox"> I wish to get policy details on my  whatsapp number
+              </div>
+            </td>
+          </tr>
+          <tr><td colspan="2" style="text-align: center;">
+           <div class="form-group">
+            <input type="submit" class="r" value="Submit">
+            
+          </div>
+        </td></tr></table>
+         </form>
+        </div>
+     <script type="text/javascript">
+  function valida()
+    {
+       if(document.getElementById("12").value=="")
+      {
+        alert("Please fill these field!")
+        document.getElementById("12").focus();
+        return false;
+      }
+       
+      
+      
+      a=document.getElementById("33").value
+      if(a==""||a.length!=10||isNaN(a))
+      {
+        alert("Please provide valid phone number!");
+        document.getElementById("33").focus();
+        return false;
+      }
+    
+      x=document.getElementById("44").value;
+      atpos=x.indexOf("@");
+      dotpos=x.indexOf(".");
+      dotposLast=x.lastIndexOf(".");
+      if(x==""||atpos==0||dotpos<=atpos+2||dotposLast+2>=x.length)
+      {
+        alert("Please provide correct Email id!");
+        document.getElementById("44").focus();
+        return false;
+      }
+     
+      return(true);
+    }
+</script>   
+
+
+<div id="Insurax" class="tabcontent">
+  
+        <form class="form" onsubmit="return (validat())">
+         <table><tr><td>
+          <div class="form-group" >
+            Policy Number :
+            <input type="text" class="form-control" id="13">
+            
+          </div>
+        </td><td>
+          <div class="form-group" > Engine Number :
+            <input type="text" class="form-control" id="21">
+            
+          </div></td></tr><tr><td colspan="2" style="text-align: center;">
+           <div class="form-group">
+            <input type="submit" class="r" value="Submit">
+            
+          </div>
+        </td></tr></table>
+         </form>
+        </div>
+<script type="text/javascript">
+  function validat()
+    {
+       if(document.getElementById("13").value=="")
+      {
+        alert("Please fill these field!")
+        document.getElementById("13").focus();
+        return false;
+      }
+       if(document.getElementById("21").value=="")
+      {
+        alert("Please fill these field!")
+        document.getElementById("21").focus();
+        return false;
+      }
+      return true;
+}
+</script>
+<script type="text/javascript">
+  function openPage(pageName) {
+  var i, tabcontent;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+
+  document.getElementById(pageName).style.display = "block";
+
+}
+document.getElementById("defaultOpen").click();
+
+
+</script>
+
+</div>
+</div>
+<section class="fullgreen">
+  <div class="main"><table><tr><td style="padding-right: 40px;">
+   <div class="carimg">
+    <img src="199.png" style="height: 275px; width: 400px;">
+     
+   </div></td><td>  <div class="text"><p><b><span style="font-size: 20px;line-height: 30px;letter-spacing: 0.5px;">Get cashless services with INSURAX car insurance at 3400+* network garages</span></b><br><br>
+<span style="line-height: 20px;letter-spacing: 0.5px;">
+Whether long journeys or tough roads, be assured of assistance when you need it.<br> With our car insurance, you become eligible for cashless services at our 3400+ network garages across the country.</span></p></div></td></tr></table>
+    
+  </div>
+   
+</section>
+<section class="info">
+  <div class="main">
+    <div class="content">
+      <div class="heading" > <h1 style="text-align: center; font-weight: bold;">UNDERSTAND CAR INSURANCE POLICY COVERAGE</h1></div>
+      <h2 style="padding-bottom: 15px;">What is covered under your car insurance policy: Inclusions</h2>
+   <div class="inclusions">
+    <table>
+      <tr>
+        <td><ul><li>
+          <h4>Loss or damage to your vehicle against natural calamities -</h4></li></ul>
+          <p>Fire, explosion, self-ignition or lightning, earthquake, flood, typhoon, hurricane, storm, tempest, inundation, cyclone, hailstorm, frost, landslide, rockslide.<br><br>
+       </p>
+ 
+        </td>
+        <td><ul><li>
+          <h4>Loss or damage to your vehicle against man-made calamities -</h4></li></ul>
+          <p>Burglary, theft, riot, strike, malicious act, accident by external means, terrorist activity, any damage in transit by road, rail, inland waterway, lift, elevator or air.
+
+      </p></td>
+      </tr>
+      <tr>
+        <td><ul><li>
+          <h4>Personal Accident Cover -</h4></li></ul>
+          <p>Coverage of  15 lakhs for the individual driver of the vehicle while travelling, mounting or dismounting from the car. Optional personal accident covers for co-passengers are also available.
+
+      </p></td>
+      <td><ul><li>
+          <h4>Third Party Legal Liability -</h4></li></ul>
+          <p>Protection against legal liability due to accidental damages resulting in the permanent injury or death of a person, and damage caused to the surrounding property.
+
+      </p></td>
+      </tr>
+      <tr>
+        <td colspan="2"> <strong>**To understand exactly what all your car insurance policy covers, and be in a much better position to benefit from it, read your Policy Wordings carefully</strong></td>
+      </tr>
+    </table>
+    </div>
+
+    <h2 style="padding-bottom: 25px; padding-top: 30px;">What is not covered under your car insurance policy: Exclusions</h2>
+   <div class="inclusions">
+    <table style="width: 100%;">
+      <tr>
+        <td><ul><li>Normal wear and tear and general ageing of the vehicle</li></ul></td>
+        <td><ul><li>Mechanical/ electrical breakdown</li></ul></td>
+      </tr>
+      <tr>
+        <td><ul><li>Depreciation or any consequential loss</li></ul></td>
+        <td><ul><li>Loss/ damage due to war, mutiny or nuclear risk</li></ul></td>
+        </tr>
+        </table>  <span id="dots">... <br><br></span> <span id="more" style="display:none;">
+           <table style="width: 97%;"><tr>
+        <td><ul><li>Damage to/ by a person driving any vehicles or cars without a valid license</li></ul></td>
+        <td><ul><li>Vehicles including cars being used otherwise than <br>in accordance with limitations as to use</li></ul></td>
+        </tr>
+        <td><ul><li>Damage to/ by a person driving the vehicle under the influence of drugs or liquor</li></ul></td>
+        <td><ul><li>Loss/ damage due to war, mutiny or nuclear risk</li></ul></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><ul><li>Damage to tyres and tubes unless the vehicle is damaged<br> at the same time, in which case the liability of the company shall <br>be limited to 50% of the cost of replacement</li></ul></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><ul><li>Driving the vehicle against the limitations<br> as to use</li></ul></td>
+        </tr>
+ </table></span>
+<button onclick="no3()" class="read" id="r"> Read More > </button>
+            <script type="text/javascript">
+              function no3() {
+                 dots = document.getElementById("dots");
+                 moreText = document.getElementById("more");
+                 btnText = document.getElementById("r");
+
+                if (dots.style.display === "none") {
+                  dots.style.display = "inline";
+                  btnText.innerHTML = "Read More >"; 
+                  moreText.style.display = "none";
+                } else {
+                  dots.style.display = "none";
+                  btnText.innerHTML = "Read Less >"; 
+                  moreText.style.display = "inline";
+                }
+              }
+            </script>
+
+            <p style="letter-spacing: 0.5px; padding-top: 20px; font-weight: bold; line-height: 27px;">It’s always a good idea to be aware of what is excluded from your policy, so that you are not disappointed by extra expenses later. So make sure you go through the Car Insurance Policy Wordings carefully.</p>
+            <p style="letter-spacing: 0.5px; padding-top: 20px; line-height: 27px; padding-bottom: 70px;"><i>
+              Car Insurance<br>
+              Private Car Package Policy <br>
+              IRDAN115P0017V01200102 <br>
+              Motor 01<br>
+            </p>
+     
+  </div>
+</div></div></section>
+<section class="ben">
+  <div class="main">
+    <div class="content" style=" margin-top: 40px;  padding: 5px;">
+      <div class="heading"> 
+      <h2 style="font-weight: 20px;">Check the sum insured offered by your car insurance policy</h2></div>
+      <p style=" letter-spacing: 0.5px; padding-top: 20px;  line-height: 27px; padding-top: : 15px;">Each car is insured at a fixed value which is termed as the Insured’s Declared Value (IDV). This sum insured as part of the car insurance is calculated on the basis of a number of factors. Here’s how it works:</p>
+      <ul style="padding: 20px;">
+        <li>IDV is calculated on the basis of the manufacturer's listed selling price of the vehicle plus the listed price of any accessories after deducting the depreciation for every year as per the schedule provided by the Indian Motor Tariff.</li>
+        <li>If the price of any electrical and / or electronic item installed in the vehicle is not included in the manufacturer's listed selling price, then the actual value (after depreciation) of this item can be added to the sum insured over and above the IDV.</li>
+        <li>In case of vehicles fitted with bi-fuel system such as ​petrol/​diesel and CNG/LPG, permitted by the concerned RTO, the CNG/LPG kit fitted to the vehicle is to be insured separately at an additional premium of 4% on the value of such kit. You need to specifically declare this in the proposal form.</li></i>
+      </ul>
+  </div>
+  </div>
+</section>
+<section class="fullorange">
+  <div class="main"><table><tr><td style="padding-right: 40px;">
+   <div class="dyk">
+    <img src="dyk.png" style="height: 275px; width: 400px; padding-left: : 40px;">
+     
+   </div></td><td>  <div class="text"><p><b><span style="font-size: 40px;line-height: 30px;letter-spacing: 0.5px; color: #fff;">How to do mobile self-inspection of your car for online car insurance?</span></b><br><br>
+<span style="line-height: 30px;letter-spacing: 0.5px; color: #fff;">
+Once you pay for a break-in car insurance policy, you can either ask the insurer to inspect the vehicle or choose to inspect it yourself on our insure mobile app. </span></p></div></td></tr></table>
+    
+  </div>
+   
+</section>
+<section class="claimproc">
+  <div class="main">
+    <div class="content">
+    <div class="heading">
+      <h1 style="text-align: center; font-weight: bold; font-size: 27px;">EXPLORE OUR SIMPLE & HASSLE-FREE CAR INSURANCE CLAIM PROCESS</h1>
+    </div>
+    <div class="accord">
+    <div class="accordion">
+
+
+
+
+<button class="accordion" id="open" >Once you report a claim to us, you can avail a host of benefits:
+</button>
+
+<div class="panel">
+
+<p>In case of an unfortunate accident / breakdown, be assured of complete assistance from us to get back on the road, as early as possible.<br>
+
+The first thing you need to do is call our toll free number 1800 2666, and then leave the rest to us.<br><br>
+<ul><li>Cashless repair across a wide network of garages to ensure a smooth ride</li><br>
+<li>Free pick-up, towing facility and wash benefit at selected garages</li><br>
+<li>Loss Assessment Survey of vehicle within 4 hours by dedicated ​Relationship Manager*</li><br>
+<li>6 months quality assurance on all repairs**</li><br>
+<li>If the vehicle is serviced in a garage outside the purview of our network, then you can claim reimbursement for the same</li><br>
+*Applicable on claims intimated before 2 PM and not applicable on Sundays and National Holidays 
+**Subject to maximum usage upto 6,000 km, post such repairs</p>
+</ul>
+</div>
+
+<button class="accordion">In case of an accident, make sure you follow these steps :</button>
+<div class="panel">
+
+<p><ul>
+  <li>Note the number of the other vehicle involved in the accident, if any</li><br>
+<li>Note down the names and contact details of witnesses, if any</li><br>
+<li>Contact our toll free number 1800 2666 and get your claim number / reference number</li><br>
+<li>The Call Centre Representative will provide you with the details of the documents required for claim processing and also details of our preferred cashless garage</li><br>
+<li>File an FIR at the nearest police station in case of property damage, bodily injury, theft and major damages</li></ul></p>
+
+</div>
+
+<button class="accordion">Here’s what happens after you have registered your claim
+</button>
+<div class="panel">
+
+<p><ul><li>Our Customer Service Manager (C​SM) will contact you within 24 hours of registering the claim</li><br>
+<li>You will then need to submit all the required documents to the dealer / C​SM and get them verified with the originals</li><br>
+<li>Our C​SM will then get an estimate for the repairs of your vehicle and give spot approval after assessment</li><br>
+<li>Payments that need to be borne by us at our preferred garage will be made directly to the garage on completion of the repairs</li><br>
+<li>Our C​SM will inform you in case any balance amount has to be paid by you as per the policy terms and conditions</li></ul></p>
+
+</div>
+
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+
+var i;
+
+for (i = 0; i < acc.length; i++) {
+ acc[i].onclick = function(){
+  this.classList.toggle("active");
+  this.nextElementSibling.classList.toggle("show");
+
+  }
+
+}
+
+</script>
+    </div>
+  </div>
+  </div></div>
+
+</section>
+<section class="faq">
+  <div class="main">
+    <div class="cont">
+    <div class="heading">
+    <h1 style="color: #fff;">COMMON QUERIES ABOUT CAR INSURANCE (FAQS)</h1> 
+      
+    </div>
+     
+    <div class="tabnav">
+    <button class="tab" onclick="openPag('general')" id="defaultOpe">GENERAL</button>
+    <button class="tab" onclick="openPag('cover')">COVERS</button>
+    <button class="tab" onclick="openPag('premium')">PREMIUM</button>
+    <button class="tab" onclick="openPag('claims')">CLAIMS</button>
+    <button class="tab" onclick="openPag('policy')">POLICY</button>
+<script type="text/javascript">
+  function openPag(pageName) {
+  var i, tabconten;
+  tabconten = document.getElementsByClassName("pagetab");
+  for (i = 0; i < tabconten.length; i++) {
+    tabconten[i].style.display = "none";
+  }
+
+
+  document.getElementById(pageName).style.display = "block";
+
+}
+document.getElementById("defaultOpe").click();
+</script>
+</div>
+    <hr style="border-width: 2px;">
+   <div class="pag">
+      <div id="general" class="pagetab">
+        <h3>&#10001; &nbsp;Which are the services provided by INSURAX's under Road Side Assistance (RSA)? *</h3>
+        <p id="c" style="margin-left: 21px; padding: 10px;">We offer the following services under Road Side Assistance</p>
+         <ul >
+         <li id="c"> Breakdown support over phone </li>
+          <li id="c">Minor Repairs</li>
+         <li id="c"> Flat Tyre</li>
+          <li id="c">Battery jump start</li>
+         <li id="c">Arrangement of keys</li>
+          <li id="c">Towing on breakdown/accident</li>
+         <li id="c"> Arrangement of rental vehicle</li>
+          <li id="c">Arrangement/ Supply of fuel</li>
+         <li id="c"> Arrangement of Accommodation</li>
+          <li id="c">Message Relay</li>
+        </ul>
+          <p id="c" style="padding: 10px 0px;"><b>Note:</b> For details kindly refer Policy Wordings of your private car ​insurance plan.
+          *For list of services applicable in a policy, please refer policy schedule.</p>
+        <h3>&#10001; &nbsp;Can I renew my car insurance policy online?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Yes, you can renew your car insurance policy online, starting 60 days before expiry of your existing policy. In case your vehicle insurance policy has already expired, our authorised surveyor will inspect the vehicle, before issuance of policy. The car insurance policy would only be issued subject to a satisfactory inspection and submission of the required documents</p>
+
+        <h3>&#10001; &nbsp;How to buy a Car Insurance Policy?</h3>
+        <p id="c" style="margin-left: 21px; padding: 10px;"><b>Online</b></p>
+         <ul >
+         <li id="c"> Log on to INSURAX's website </li>
+          <li id="c">Select the motor insurance tab and click on buy new insurance policy</li>
+         <li id="c"> Enter mobile number and email address</li>
+          <li id="c">Click on get quote option</li>
+         <li id="c">Fill in the details and proceed to get an insurance quote</li>
+          <li id="c">If satisfied with the quote, click on ‘buy now’ option</li>
+         <li id="c"> The payment page will open</li>
+          <li id="c">Proceed to make the payment through net banking/credit card or debit card</li>
+         <li id="c"> The insurance policy will be emailed immediately</li>
+       </ul>
+        <p id="c" style="margin-left: 21px; padding: 10px;"><b>Offline</b></p>
+         <ul>
+         <li id="c">Go to the nearest INSURAX's branch </li>
+          <li id="c">Fill the insurance proposal form</li>
+         <li id="c">Cross-check the details entered</li>
+          <li id="c">Submit the duly filled form along with required documents</li>
+         <li id="c">Make payment via cheque or demand draft</li>
+          <li id="c">After inspection is complete, the policy papers will be mailed to the customer</li>
+         
+       </ul>
+     </div>
+
+     <div id="policy" class="pagetab">
+              <h3>&#10001; &nbsp;Which are the services provided by INSURAX's under Road Side Assistance (RSA)? *</h3>
+        <p id="c" style="margin-left: 21px; padding: 10px;">We offer the following services under Road Side Assistance</p>
+         <ul >
+         <li id="c"> Breakdown support over phone </li>
+          <li id="c">Minor Repairs</li>
+         <li id="c"> Flat Tyre</li>
+          <li id="c">Battery jump start</li>
+         <li id="c">Arrangement of keys</li>
+          <li id="c">Towing on breakdown/accident</li>
+         <li id="c"> Arrangement of rental vehicle</li>
+          <li id="c">Arrangement/ Supply of fuel</li>
+         <li id="c"> Arrangement of Accommodation</li>
+          <li id="c">Message Relay</li>
+        </ul>
+          <p id="c" style="padding: 10px 0px;"><b>Note:</b> For details kindly refer Policy Wordings of your private car ​insurance plan.
+          *For list of services applicable in a policy, please refer policy schedule.</p>
+        <h3>&#10001; &nbsp;Can I renew my car insurance policy online?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Yes, you can renew your car insurance policy online, starting 60 days before expiry of your existing policy. In case your vehicle insurance policy has already expired, our authorised surveyor will inspect the vehicle, before issuance of policy. The car insurance policy would only be issued subject to a satisfactory inspection and submission of the required documents</p>
+
+        <h3>&#10001; &nbsp;How to buy a Car Insurance Policy?</h3>
+        <p id="c" style="margin-left: 21px; padding: 10px;"><b>Online</b></p>
+         <ul >
+         <li id="c"> Log on to INSURAX's website </li>
+          <li id="c">Select the motor insurance tab and click on buy new insurance policy</li>
+         <li id="c"> Enter mobile number and email address</li>
+          <li id="c">Click on get quote option</li>
+         <li id="c">Fill in the details and proceed to get an insurance quote</li>
+          <li id="c">If satisfied with the quote, click on ‘buy now’ option</li>
+         <li id="c"> The payment page will open</li>
+          <li id="c">Proceed to make the payment through net banking/credit card or debit card</li>
+         <li id="c"> The insurance policy will be emailed immediately</li>
+       </ul>
+        <p id="c" style="margin-left: 21px; padding: 10px;"><b>Offline</b></p>
+         <ul>
+         <li id="c">Go to the nearest INSURAX's branch </li>
+          <li id="c">Fill the insurance proposal form</li>
+         <li id="c">Cross-check the details entered</li>
+          <li id="c">Submit the duly filled form along with required documents</li>
+         <li id="c">Make payment via cheque or demand draft</li>
+          <li id="c">After inspection is complete, the policy papers will be mailed to the customer</li>
+         
+       </ul>
+      </div>
+
+      <div id="cover" class="pagetab">
+      <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted</p>
+
+      <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted</p>
+  </div>
+
+  <div id="premium" class="pagetab">
+               <h3>&#10001; &nbsp;Which are the services provided by INSURAX's under Road Side Assistance (RSA)? *</h3>
+        <p id="c" style="margin-left: 21px; padding: 10px;">We offer the following services under Road Side Assistance</p>
+         <ul >
+         <li id="c"> Breakdown support over phone </li>
+          <li id="c">Minor Repairs</li>
+         <li id="c"> Flat Tyre</li>
+          <li id="c">Battery jump start</li>
+         <li id="c">Arrangement of keys</li>
+          <li id="c">Towing on breakdown/accident</li>
+         <li id="c"> Arrangement of rental vehicle</li>
+          <li id="c">Arrangement/ Supply of fuel</li>
+         <li id="c"> Arrangement of Accommodation</li>
+          <li id="c">Message Relay</li>
+        </ul>
+          <p id="c" style="padding: 10px 0px;"><b>Note:</b> For details kindly refer Policy Wordings of your private car ​insurance plan.
+          *For list of services applicable in a policy, please refer policy schedule.</p>
+        <h3>&#10001; &nbsp;Can I renew my car insurance policy online?</h3>
+        <p id="c" style="margin-left: 21px; line-height: 23px;">Yes, you can renew your car insurance policy online, starting 60 days before expiry of your existing policy. In case your vehicle insurance policy has already expired, our authorised surveyor will inspect the vehicle, before issuance of policy. The car insurance policy would only be issued subject to a satisfactory inspection and submission of the required documents</p>
+
+        <h3>&#10001; &nbsp;How to buy a Car Insurance Policy?</h3>
+        <p id="c" style="margin-left: 21px; padding: 10px;"><b>Online</b></p>
+         <ul >
+         <li id="c"> Log on to INSURAX's website </li>
+          <li id="c">Select the motor insurance tab and click on buy new insurance policy</li>
+         <li id="c"> Enter mobile number and email address</li>
+          <li id="c">Click on get quote option</li>
+         <li id="c">Fill in the details and proceed to get an insurance quote</li>
+          <li id="c">If satisfied with the quote, click on ‘buy now’ option</li>
+         <li id="c"> The payment page will open</li>
+          <li id="c">Proceed to make the payment through net banking/credit card or debit card</li>
+         <li id="c"> The insurance policy will be emailed immediately</li>
+       </ul>
+        <p id="c" style="margin-left: 21px; padding: 10px;"><b>Offline</b></p>
+         <ul>
+         <li id="c">Go to the nearest INSURAX's branch </li>
+          <li id="c">Fill the insurance proposal form</li>
+         <li id="c">Cross-check the details entered</li>
+          <li id="c">Submit the duly filled form along with required documents</li>
+         <li id="c">Make payment via cheque or demand draft</li>
+          <li id="c">After inspection is complete, the policy papers will be mailed to the customer</li>
+         
+       </ul>
+      </div>
+       <div id="claims" class="pagetab">
+        <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted</p>
+
+      <h3>&#10001; &nbsp; What is Garage Cash Plan?</h3>
+     <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;"><b>For Partial Loss- :</b> If your vehicle is under repair after an accident, a fixed daily allowance will be paid for the number of days the vehicle will be in authorised garage for repair or number of days as mentioned in the schedule, whichever is lesser.</p>
+
+      <p id="c" style="margin-left: 21px; padding: 10px;">In the event of Total Loss/Constructive Total Loss of your vehicle, a lump sum amount as mentioned in the schedule shall be paid.</p>
+      <h3>&#10001; &nbsp; What is the duration of days covered under Garage Cash Cover?</h3>
+      <p id="c" style="margin-left: 21px; padding: 10px; line-height: 23px;">The duration for which the company will be liable for claim in respect of this add-on will be considered from the day after the insured vehicle is delivered to the garage till the day.<br>Immediately preceding the date of discharge or date of invoice for such repair as prepared by the garage, whichever is earlier.<br>*As per the plan opted</p>
+     </div>
+
+   
+</div>
+  </div>
+  </div>
+  
+</section>
+<div class="customer">
+<div class="main">
+  <div class="heading" > <h1 style="text-align: center; font-weight: bold;">TESTEMONIALS</h1></div>
+  <div class="contain">
+    
+    <div class="box">
+      <div class="img-box">
+        <img src="123.jpg" height="120" width="120">
+      </div>
+      <p>
+        <i>“INSURAX's online booking experience is very seamless, especially if one is renewing the motor policy it is the most hassle-free ... ”</i>
+      </p>
+      <h4>someone<br> <span>creative director</span></h4>
+    </div>
+    <div class="box">
+      <div class="img-box">
+        <img src="134.jpg" height="120" width="120">
+      </div>
+      <p>
+        <i>“INSURAX's online booking experience is very seamless, especially if one is renewing the motor policy it is the most hassle-free ... ”</i>
+      </p>
+      <h4>someone<br> <span>creative director</span></h4>
+    </div>
+    <div class="box">
+      <div class="img-box">
+        <img src="156jpg.jpg" height="120" width="120">
+      </div>
+      <p>
+      <i> “INSURAX's online booking experience is very seamless, especially if one is renewing the motor policy it is the most hassle-free ... ”</i>
+      </p>
+      <h4>someone<br> <span>creative director</span></h4>
+    </div>
+     
+  </div>
+</div>
+</div>
+</section>
+<section class="footer">
+  <div class="main">
+    <table>
+      <tr>
+        <th> Get to know us</th>
+        <th>Connect with us</th>
+        <th>Payment methods</th>
+        <th>Let us help you</th>
+      </tr>
+      <tr>
+        <td>
+          About us 
+        </td>
+        <td> <a href="facebook.com"><img src="fb.png" style="padding-left: 0px;"><img src="instagram.png"> <img src="linkedin.png"><img src="twit_c.png"></a></td>
+        <td>Credit Card</td>
+        <td> Your account</td>
+      </tr>
+      <tr><td>
+        Press release
+      </td>
+      <td></td>
+      <td>Debit Card</td>
+      <td>Disclaimer</td>
+       </tr>
+        <tr><td>
+        Our services
+      </td>
+      <td></td>
+      <td>Net banking</td>
+      <td>File claim</td>
+       </tr>
+    </table>
+   </div>
+</section>
+
+</body>
+</html>
